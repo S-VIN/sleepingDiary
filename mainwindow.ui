@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>618</width>
-    <height>422</height>
+    <width>674</width>
+    <height>477</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,9 +18,26 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>average sleep</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLCDNumber" name="lcdNumber"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget" native="true"/>
+      </item>
+      <item>
        <widget class="QPushButton" name="pushButton">
         <property name="text">
-         <string>PushButton</string>
+         <string>add sleep</string>
         </property>
        </widget>
       </item>
@@ -33,7 +50,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>618</width>
+     <width>674</width>
      <height>21</height>
     </rect>
    </property>
