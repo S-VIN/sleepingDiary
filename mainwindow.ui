@@ -6,56 +6,48 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>674</width>
-    <height>477</height>
+    <width>800</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <item>
-         <widget class="QLabel" name="label">
-          <property name="text">
-           <string>average sleep</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLCDNumber" name="lcdNumber"/>
-        </item>
-       </layout>
-      </item>
-      <item>
-       <widget class="QWidget" name="widget" native="true"/>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QLabel" name="label">
         <property name="text">
-         <string>add sleep</string>
+         <string>average sleep</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLCDNumber" name="lcdNumber"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>hours a week</string>
         </property>
        </widget>
       </item>
      </layout>
     </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="buttonAddSleep">
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>674</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
