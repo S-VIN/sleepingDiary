@@ -2,7 +2,6 @@
 #include "ui_addsleepwindow.h"
 
 AddSleepWindow::AddSleepWindow(QWidget *parent) :
-    QMainWindow(parent),
     ui(new Ui::AddSleepWindow)
 {
     ui->setupUi(this);

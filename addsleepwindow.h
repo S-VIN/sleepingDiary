@@ -1,13 +1,13 @@
 #ifndef ADDSLEEPWINDOW_H
 #define ADDSLEEPWINDOW_H
 
-#include <QMainWindow>
+#include <QWidget>
 
 namespace Ui {
 class AddSleepWindow;
 }
 
-class AddSleepWindow : public QMainWindow
+class AddSleepWindow : public QWidget
 {
     Q_OBJECT
 
