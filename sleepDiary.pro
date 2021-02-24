@@ -9,17 +9,20 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addsleepwindow.cpp \
     main.cpp \
     mainwindow.cpp \
     sleepchart.cpp
 
 
 HEADERS += \
+    addsleepwindow.h \
     mainwindow.h \
     sleepchart.h
 
 
 FORMS += \
+    addsleepwindow.ui \
     mainwindow.ui
 
 # Default rules for deployment.
