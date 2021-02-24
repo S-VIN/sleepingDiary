@@ -13,7 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    std:: cout  << "setup";
+
     addSleepWindow = new AddSleepWindow;
 
     connect(addSleepWindow, &AddSleepWindow::sleepWindow, this, &MainWindow::show);

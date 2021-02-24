@@ -17,9 +17,6 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-signals:
-    void show();
-
 private slots:
     void on_buttonAddSleep_clicked();
 
