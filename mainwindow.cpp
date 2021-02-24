@@ -1,10 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include <iostream>
-
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QMainWindow>
 #include <QDebug>
 
 
@@ -13,10 +10,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-    addSleepWindow = new AddSleepWindow;
-
-    connect(addSleepWindow, &AddSleepWindow::sleepWindow, this, &MainWindow::show);
 
 
     QtCharts::QChartView *chartView = new  QtCharts::QChartView(sleepChart->createChart());
@@ -32,12 +25,16 @@ MainWindow::~MainWindow()
 {
     delete ui;
     delete sleepChart;
-    delete addSleepWindow;
+
 }
 
 
 void MainWindow::on_buttonAddSleep_clicked()
 {
-    addSleepWindow->show();
-    this->close();      // Закрываем окно
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
 }

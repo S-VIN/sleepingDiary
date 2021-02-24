@@ -3,7 +3,6 @@
 
 #include <QWidget>
 #include "sleepchart.h"
-#include "addsleepwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -20,10 +19,11 @@ public:
 private slots:
     void on_buttonAddSleep_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     SleepChart *sleepChart = new SleepChart;
-    AddSleepWindow *addSleepWindow;
 
 };
 #endif // MAINWINDOW_H
