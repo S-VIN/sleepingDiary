@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QWidget>
+
+#include "ui_mainwindow.h"
+
+#include <QtWidgets/QApplication>
+
 #include "sleepchart.h"
 
 QT_BEGIN_NAMESPACE

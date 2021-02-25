@@ -10,6 +10,8 @@
 #include <QtCharts/QBarCategoryAxis>
 #include <QtCharts/QValueAxis>
 
+#include "database.h"
+
 class SleepChart {
 public:
     explicit SleepChart(QWidget *parent = nullptr);
