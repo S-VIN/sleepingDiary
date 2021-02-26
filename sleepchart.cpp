@@ -17,37 +17,44 @@ SleepChart::SleepChart(QWidget *parent){
     database.setSleep({6, 1, 2000}, a);
 
 
-    QBarSet *set = new QBarSet("");
+    QBarSet *sleepDataArray = new QBarSet("");
+    QStringList daysOfWeek;
     QBarSeries *series = new QBarSeries();
-    series->append(set);
-    chart->addSeries(series);
-    chart->setAnimationOptions(QChart::SeriesAnimations);
-    *set << 1 << 2 << 3 << 4 << 5 << 6;
-
-
-    QStringList categories;
-    auto temp = database.getDates();
-    for(QDate date : temp){
-        std:: cout << date.toString().toStdString() << ' ';
-        categories << date.toString();
-    }
-
-
-
-
+    QChart *chart = new QChart();
     QBarCategoryAxis *axisX = new QBarCategoryAxis();
-    axisX->append(categories);
+    QValueAxis *axisY = new QValueAxis();
+    QChartView *chartView = new QChartView(chart);
+
+    series->append(sleepDataArray);
+
+    *sleepDataArray << 1 << 2 << 3 << 4 << 5 << 6 << 1;
+    daysOfWeek << "mon" << "tue" << "wen" << "thu" << "fri" << "sat" << "sun";
+
+
+    QXYSeries *normalLine = new QXYSeries();
+
+
+
+    //chart->addSeries(series);
+    chart->setAnimationOptions(QChart::SeriesAnimations);
+
+
+
+    chart->addSeries(normalLine);
+
+    axisX->append(daysOfWeek);
     chart->addAxis(axisX, Qt::AlignBottom);
-    series->attachAxis(axisX);
+
+
+
+    axisY->setRange(0, 15);
+    chart->addAxis(axisY, Qt::AlignLeft);
+    series->attachAxis(axisY);
+
 
 
     chart->legend()->hide();
-
-    QValueAxis *axisY = new QValueAxis();
-    axisY->setRange(0,15);
-
-    chart->addAxis(axisY, Qt::AlignLeft);
-    series->attachAxis(axisY);
+    chartView->setRenderHint(QPainter::Antialiasing);
 }
 
 QChart* SleepChart::createChart(){
