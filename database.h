@@ -6,8 +6,9 @@
 #include <map>
 
 struct Sleep{
-    QTime start = QTime(0,0);
-    QTime end = QTime(0,0);
+public:
+    QTime start;
+    QTime end;
 };
 
 
@@ -15,10 +16,10 @@ class Database
 {
 public:
     Database();
-    Sleep getSleep(QDate date);
-    void setSleep(QDate date, Sleep sleep);
+    struct Sleep getSleep(QDate date);
+    void setSleep(QDate date, struct Sleep sleep);
     std:: vector<QDate> getDates();
 private:
-    std::map<QDate, Sleep> data;
+    std::map<QDate, struct Sleep> data;
 };
 #endif // DATABASE_H
