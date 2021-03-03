@@ -12,6 +12,12 @@ public:
 };
 
 
+struct Settings{
+    double sleepNorm;
+    int age;
+    bool gender;
+};
+
 class Database
 {
 public:
@@ -19,7 +25,10 @@ public:
     struct Sleep getSleep(QDate date);
     void setSleep(QDate date, struct Sleep sleep);
     std:: vector<QDate> getDates();
+    Settings settings;
 private:
     std::map<QDate, struct Sleep> data;
 };
+
+
 #endif // DATABASE_H

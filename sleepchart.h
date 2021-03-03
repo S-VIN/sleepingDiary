@@ -12,6 +12,8 @@ class SleepChart {
 public:
     explicit SleepChart(QWidget *parent = nullptr);
      QtCharts:: QChart* createChart();
+     void addDataToWeekSet(QBarSet *set, double data);
+     QStringList createDaysOfWeekCategories();
 private:
      QtCharts:: QChart* chart = new QtCharts:: QChart;
 
